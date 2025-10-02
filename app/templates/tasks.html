@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - Task Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Task Management Dashboard</h1>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="analytics-container">
+            <div class="analytics-card">
+                Total Tasks
+                <span id="total-tasks">0</span>
+            </div>
+            <div class="analytics-card">
+                Pending
+                <span id="pending-tasks">0</span>
+            </div>
+            <div class="analytics-card">
+                In Progress
+                <span id="in-progress-tasks">0</span>
+            </div>
+            <div class="analytics-card">
+                Completed
+                <span id="completed-tasks">0</span>
+            </div>
+        </div>
+
+        <div class="dashboard-content">
+
+            <div class="tasks-column">
+                <div class="filters">
+                    <label>Status:</label>
+                    <select id="status-filter">
+                        <option value="">All</option>
+                        <option value="pending">Pending</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+
+                    <label>Priority:</label>
+                    <select id="priority-filter">
+                        <option value="">All</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <button id="apply-filters">Apply Filters</button>
+                </div>
+
+                <div class="tasks-list" id="tasks-list">
+                </div>
+
+                <div class="pagination">
+                    <button id="prev-page" disabled>← Prev</button>
+                    <span id="current-page">1</span>
+                    <button id="next-page" disabled>Next →</button>
+                </div>
+
+                <form id="addTaskForm">
+                    <h3>Add New Task</h3>
+                    <input type="text" name="title" placeholder="Task Title" required>
+                    <textarea name="description" placeholder="Description"></textarea>
+                    <select name="priority" required>
+                        <option value="low">Low Priority</option>
+                        <option value="medium" selected>Medium Priority</option>
+                        <option value="high">High Priority</option>
+                    </select>
+                    <select name="status" required>
+                        <option value="pending" selected>Pending</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                    <input type="date" name="due_date">
+                    <input type="time" name="due_time">
+                    <button type="submit">Add Task</button>
+                </form>
+            </div>
+
+            <div class="sidebar-column">
+                <div class="leaderboard-section">
+                    <h2>Top Users</h2>
+                    <ol id="leaderboard-list">
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Task Management System</p>
+    </footer>
+
+    <div id="toast-notification"></div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+
+</html>
