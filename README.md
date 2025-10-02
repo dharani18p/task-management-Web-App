@@ -98,188 +98,168 @@ To get a local copy up and running, follow these simple steps.
 
 ## 📋 API Endpoints
 
-<details>
-  <summary><strong>Click to view API Endpoint Documentation</strong></summary>
-
-  ---
-  
-  <details>
-    <summary><code>POST /api/users/register</code> - Register a new user</summary>
-    <table>
-      <tr>
-        <td valign="top">
-          <p>This endpoint allows a new user to create an account.</p>
-          <strong>Request Body:</strong>
-          <pre><code>{
+### `POST /api/users/register` - Register a new user
+<table>
+  <tr>
+    <td valign="top">
+      <p>This endpoint allows a new user to create an account.</p>
+      <strong>Request Body:</strong>
+      <pre><code>{
   "name": "Test User",
   "email": "test@example.com",
   "password": "password123"
 }</code></pre>
-          <strong>Success Response:</strong> <code>201 Created</code>
-        </td>
-        <td valign="top">
-          <strong>Example in Postman:</strong><br>
-          <a href="https://github.com/user-attachments/assets/645441aa-8278-4ff3-95d4-718566c9616b">
-            <img src="https://github.com/user-attachments/assets/645441aa-8278-4ff3-95d4-718566c9616b" alt="Register User API Screenshot" width="400"/>
-          </a>
-          <br><em>Click image to enlarge</em>
-        </td>
-      </tr>
-    </table>
-  </details>
+      <strong>Success Response:</strong> <code>201 Created</code>
+    </td>
+    <td valign="top">
+      <strong>Example in Postman:</strong><br>
+      <a href="https://github.com/user-attachments/assets/645441aa-8278-4ff3-95d4-718566c9616b">
+        <img src="https://github.com/user-attachments/assets/645441aa-8278-4ff3-95d4-718566c9616b" alt="Register User API Screenshot" width="400"/>
+      </a>
+      <br><em>Click image to enlarge</em>
+    </td>
+  </tr>
+</table>
 
-  ---
+---
 
-  <details>
-    <summary><code>POST /api/users/login</code> - Log in a user</summary>
-    <table>
-      <tr>
-        <td valign="top">
-          <p>Authenticates a user and sets the secure <code>access_token_cookie</code> and <code>csrf_access_token_cookie</code>.</p>
-          <strong>Request Body:</strong>
-          <pre><code>{
+### `POST /api/users/login` - Log in a user
+<table>
+  <tr>
+    <td valign="top">
+      <p>Authenticates a user and sets the secure <code>access_token_cookie</code> and <code>csrf_access_token_cookie</code>.</p>
+      <strong>Request Body:</strong>
+      <pre><code>{
   "email": "test@example.com",
   "password": "password123"
 }</code></pre>
-          <strong>Success Response:</strong> <code>200 OK</code>
-        </td>
-        <td valign="top">
-          <strong>Example in Postman:</strong><br>
-          <a href="https://github.com/user-attachments/assets/29d6923d-26fc-4a75-9aa4-af1ef7459fad">
-            <img src="https://github.com/user-attachments/assets/29d6923d-26fc-4a75-9aa4-af1ef7459fad" alt="Login API Screenshot" width="400"/>
-          </a>
-          <br><em>Click image to enlarge</em>
-          <hr>
-          <strong>Resulting Cookies:</strong><br>
-          <a href="https://github.com/user-attachments/assets/e147c89e-eacc-4d8c-bcb9-a2d78f9529b5">
-            <img src="https://github.com/user-attachments/assets/e147c89e-eacc-4d8c-bcb9-a2d78f9529b5" alt="Login Cookies Screenshot" width="400"/>
-          </a>
-          <br><em>Click image to enlarge</em>
-        </td>
-      </tr>
-    </table>
-  </details>
+      <strong>Success Response:</strong> <code>200 OK</code>
+    </td>
+    <td valign="top">
+      <strong>Example in Postman:</strong><br>
+      <a href="https://github.com/user-attachments/assets/29d6923d-26fc-4a75-9aa4-af1ef7459fad">
+        <img src="https://github.com/user-attachments/assets/29d6923d-26fc-4a75-9aa4-af1ef7459fad" alt="Login API Screenshot" width="400"/>
+      </a>
+      <br><em>Click image to enlarge</em>
+      <hr>
+      <strong>Resulting Cookies:</strong><br>
+      <a href="https://github.com/user-attachments/assets/e147c89e-eacc-4d8c-bcb9-a2d78f9529b5">
+        <img src="https://github.com/user-attachments/assets/e147c89e-eacc-4d8c-bcb9-a2d78f9529b5" alt="Login Cookies Screenshot" width="400"/>
+      </a>
+      <br><em>Click image to enlarge</em>
+    </td>
+  </tr>
+</table>
 
-  ---
-  
-  <details>
-    <summary><code>POST /api/tasks</code> - Create a new task</summary>
-    <table>
-      <tr>
-        <td valign="top">
-          <p>Creates a new task for the authenticated user. Requires the <code>X-CSRF-TOKEN</code> header.</p>
-          <strong>Request Body:</strong>
-          <pre><code>{
+---
+
+### `POST /api/tasks` - Create a new task
+<table>
+  <tr>
+    <td valign="top">
+      <p>Creates a new task for the authenticated user. Requires the <code>X-CSRF-TOKEN</code> header.</p>
+      <strong>Request Body:</strong>
+      <pre><code>{
   "title": "My New Task",
   "description": "Details about the task.",
   "priority": "high"
 }</code></pre>
-          <strong>Success Response:</strong> <code>201 Created</code>
-        </td>
-        <td valign="top">
-          <strong>Example in Postman:</strong><br>
-          <a href="https://github.com/user-attachments/assets/edce1601-6bb5-4740-b60f-b12ba269c067">
-            <img src="https://github.com/user-attachments/assets/edce1601-6bb5-4740-b60f-b12ba269c067" alt="Create Task API Screenshot" width="400"/>
-          </a>
-          <br><em>Click image to enlarge</em>
-        </td>
-      </tr>
-    </table>
-  </details>
+      <strong>Success Response:</strong> <code>201 Created</code>
+    </td>
+    <td valign="top">
+      <strong>Example in Postman:</strong><br>
+      <a href="https://github.com/user-attachments/assets/edce1601-6bb5-4740-b60f-b12ba269c067">
+        <img src="https://github.com/user-attachments/assets/edce1601-6bb5-4740-b60f-b12ba269c067" alt="Create Task API Screenshot" width="400"/>
+      </a>
+      <br><em>Click image to enlarge</em>
+    </td>
+  </tr>
+</table>
 
-  ---
- <details>
-    <summary><code>GET /api/tasks</code> - Get all tasks</summary>
-    <table>
-      <tr>
-        <td valign="top">
-          <p>Retrieves a paginated and filterable list of tasks for the logged-in user.</p>
-          <strong>Query Parameters:</strong>
-          <ul>
-            <li><code>page</code> (e.g., 1)</li>
-            <li><code>limit</code> (e.g., 10)</li>
-            <li><code>status</code> (e.g., "pending")</li>
-            <li><code>priority</code> (e.g., "high")</li>
-          </ul>
-          <strong>Success Response:</strong> <code>200 OK</code>
-        </td>
-        <td valign="top">
-          <strong>Example in Postman:</strong><br>
-          <a href="https://github.com/user-attachments/assets/abf052db-a0de-41ad-adb5-f4bfa2845342">
-            <img src="https://github.com/user-attachments/assets/abf052db-a0de-41ad-adb5-f4bfa2845342" alt="Get Tasks API Screenshot" width="400"/>
-          </a>
-          <br><em>Click image to enlarge</em>
-        </td>
-      </tr>
-    </table>
-  </details>
+---
 
-  ---
+### `GET /api/tasks` - Get all tasks
+<table>
+  <tr>
+    <td valign="top">
+      <p>Retrieves a paginated and filterable list of tasks for the logged-in user.</p>
+      <strong>Query Parameters:</strong>
+      <ul>
+        <li><code>page</code> (e.g., 1)</li>
+        <li><code>limit</code> (e.g., 10)</li>
+        <li><code>status</code> (e.g., "pending")</li>
+        <li><code>priority</code> (e.g., "high")</li>
+      </ul>
+      <strong>Success Response:</strong> <code>200 OK</code>
+    </td>
+    <td valign="top">
+      <strong>Example in Postman:</strong><br>
+      <a href="https://github.com/user-attachments/assets/abf052db-a0de-41ad-adb5-f4bfa2845342">
+        <img src="https://github.com/user-attachments/assets/abf052db-a0de-41ad-adb5-f4bfa2845342" alt="Get Tasks API Screenshot" width="400"/>
+      </a>
+      <br><em>Click image to enlarge</em>
+    </td>
+  </tr>
+</table>
 
-  <details>
-    <summary><code>PUT /api/tasks/&lt;task_id&gt;</code> - Update a task</summary>
-    <table>
-      <tr>
-        <td valign="top">
-          <p>Updates a specific task. Requires the <code>X-CSRF-TOKEN</code> header.</p>
-          <strong>Request Body:</strong>
-          <pre><code>{
+---
+
+### `PUT /api/tasks/<task_id>` - Update a task
+<table>
+  <tr>
+    <td valign="top">
+      <p>Updates a specific task. Requires the <code>X-CSRF-TOKEN</code> header.</p>
+      <strong>Request Body:</strong>
+      <pre><code>{
   "status": "completed",
   "priority": "low"
 }</code></pre>
-          <strong>Success Response:</strong> <code>200 OK</code>
-        </td>
-        <td valign="top">
-          <strong>Example in Postman:</strong><br>
-          <a href="https://github.com/user-attachments/assets/4f4328e3-bc83-4fa4-8f56-f10af7fae7fe">
-            <img src="https://github.com/user-attachments/assets/4f4328e3-bc83-4fa4-8f56-f10af7fae7fe" alt="Update Task API Screenshot" width="400"/>
-          </a>
-          <br><em>Click image to enlarge</em>
-        </td>
-      </tr>
-    </table>
-  </details>
+      <strong>Success Response:</strong> <code>200 OK</code>
+    </td>
+    <td valign="top">
+      <strong>Example in Postman:</strong><br>
+      <a href="https://github.com/user-attachments/assets/4f4328e3-bc83-4fa4-8f56-f10af7fae7fe">
+        <img src="https://github.com/user-attachments/assets/4f4328e3-bc83-4fa4-8f56-f10af7fae7fe" alt="Update Task API Screenshot" width="400"/>
+      </a>
+      <br><em>Click image to enlarge</em>
+    </td>
+  </tr>
+</table>
 
-  ---
+---
 
-  <details>
-    <summary><code>DELETE /api/tasks/&lt;task_id&gt;</code> - Delete a task</summary>
-    <table>
-      <tr>
-        <td valign="top">
-          <p>Deletes a specific task. Requires the <code>X-CSRF-TOKEN</code> header.</p>
-          <strong>Success Response:</strong> <code>200 OK</code>
-        </td>
-        <td valign="top">
-          <strong>Example in Postman:</strong><br>
-          <a href="https://github.com/user-attachments/assets/f2eacd11-4f41-4488-bef9-5a849cf500a8">
-            <img src="https://github.com/user-attachments/assets/f2eacd11-4f41-4488-bef9-5a849cf500a8" alt="Delete Task API Screenshot" width="400"/>
-          </a>
-          <br><em>Click image to enlarge</em>
-        </td>
-      </tr>
-    </table>
-  </details>
+### `DELETE /api/tasks/<task_id>` - Delete a task
+<table>
+  <tr>
+    <td valign="top">
+      <p>Deletes a specific task. Requires the <code>X-CSRF-TOKEN</code> header.</p>
+      <strong>Success Response:</strong> <code>200 OK</code>
+    </td>
+    <td valign="top">
+      <strong>Example in Postman:</strong><br>
+      <a href="https://github.com/user-attachments/assets/f2eacd11-4f41-4488-bef9-5a849cf500a8">
+        <img src="https://github.com/user-attachments/assets/f2eacd11-4f41-4488-bef9-5a849cf500a8" alt="Delete Task API Screenshot" width="400"/>
+      </a>
+      <br><em>Click image to enlarge</em>
+    </td>
+  </tr>
+</table>
 
-  ---
-  
-  <details>
-    <summary><code>GET /api/analytics/leaderboard</code> - Get leaderboard</summary>
-    <table>
-      <tr>
-        <td valign="top">
-          <p>Retrieves a list of top users based on the number of completed tasks.</p>
-          <strong>Success Response:</strong> <code>200 OK</code>
-        </td>
-        <td valign="top">
-          <strong>Example in Postman:</strong><br>
-          <a href="https://github.com/user-attachments/assets/48bb4d70-cf19-4063-ab02-83b812edc288">
-            <img src="https://github.com/user-attachments/assets/48bb4d70-cf19-4063-ab02-83b812edc288" alt="Leaderboard API Screenshot" width="400"/>
-          </a>
-          <br><em>Click image to enlarge</em>
-        </td>
-      </tr>
-    </table>
-  </details>
+---
 
-</details>
+### `GET /api/analytics/leaderboard` - Get leaderboard
+<table>
+  <tr>
+    <td valign="top">
+      <p>Retrieves a list of top users based on the number of completed tasks.</p>
+      <strong>Success Response:</strong> <code>200 OK</code>
+    </td>
+    <td valign="top">
+      <strong>Example in Postman:</strong><br>
+      <a href="https://github.com/user-attachments/assets/48bb4d70-cf19-4063-ab02-83b812edc288">
+        <img src="https://github.com/user-attachments/assets/48bb4d70-cf19-4063-ab02-83b812edc288" alt="Leaderboard API Screenshot" width="400"/>
+      </a>
+      <br><em>Click image to enlarge</em>
+    </td>
+  </tr>
+</table>
