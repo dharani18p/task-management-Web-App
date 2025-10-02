@@ -1,4 +1,3 @@
-# task-management-Web-App
 # Task Management Web Application
 
 A full-stack, scalable web application designed to manage tasks efficiently for a large user base. This project provides a complete solution from user authentication to task analytics, built with a robust backend API and a dynamic frontend.
