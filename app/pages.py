@@ -1,7 +1,14 @@
-from flask import Blueprint, render_template
-from flask_jwt_extended import jwt_required # Make sure this import is at the top
+from flask import Blueprint, render_template, redirect, url_for
+from flask_jwt_extended import jwt_required
 
 pages_bp = Blueprint('pages_bp', __name__)
+
+# 👇 ADD THIS NEW ROUTE
+@pages_bp.route('/')
+def index():
+    # This redirects the root URL ("/") to the login page URL
+    return redirect(url_for('pages_bp.login_page'))
+
 
 @pages_bp.route('/register-page')
 def register_page():
@@ -11,9 +18,7 @@ def register_page():
 def login_page():
     return render_template('login.html')
 
-# 👇 THIS IS THE CORRECTED ROUTE
-@pages_bp.route('/tasks-page') # You were missing this line
-@jwt_required(locations=['cookies']) # This protects the page from non-logged-in users
+@pages_bp.route('/tasks-page')
+@jwt_required(locations=['cookies'])
 def tasks_page():
-    # This renders your main dashboard HTML file
     return render_template("tasks.html")
