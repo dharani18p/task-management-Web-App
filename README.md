@@ -17,20 +17,20 @@ A short GIF demonstrating the application's workflow is highly recommended.
   <tr>
     <td align="center">
       <strong>Login Page</strong><br><br>
+       <a href="https://github.com/user-attachments/assets/a8b8e278-daf2-4bc0-b7fe-232a79ac0f70">
+        <img src="https://github.com/user-attachments/assets/a8b8e278-daf2-4bc0-b7fe-232a79ac0f70" alt="Main Dashboard" width="260">
+      </a>
+    </td>
+    <td align="center">
+      <strong>Registration Page</strong><br><br>
       <a href="https://github.com/user-attachments/assets/f308a8c5-1bf6-4e5a-9a26-540465fb7651">
         <img src="https://github.com/user-attachments/assets/f308a8c5-1bf6-4e5a-9a26-540465fb7651" alt="Login Page" width="260">
       </a>
     </td>
     <td align="center">
-      <strong>Registration Page</strong><br><br>
-      <a href="https://github.com/user-attachments/assets/7dd99b92-5f41-4599-b07f-c912f8d36b06">
-        <img src="https://github.com/user-attachments/assets/7dd99b92-5f41-4599-b07f-c912f8d36b06" alt="Registration Page" width="260">
-      </a>
-    </td>
-    <td align="center">
       <strong>Main Dashboard</strong><br><br>
-      <a href="https://github.com/user-attachments/assets/a8b8e278-daf2-4bc0-b7fe-232a79ac0f70">
-        <img src="https://github.com/user-attachments/assets/a8b8e278-daf2-4bc0-b7fe-232a79ac0f70" alt="Main Dashboard" width="260">
+     <a href="https://github.com/user-attachments/assets/7dd99b92-5f41-4599-b07f-c912f8d36b06">
+        <img src="https://github.com/user-attachments/assets/7dd99b92-5f41-4599-b07f-c912f8d36b06" alt="Registration Page" width="260">
       </a>
     </td>
   </tr>
