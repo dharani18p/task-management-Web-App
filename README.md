@@ -188,8 +188,7 @@ To get a local copy up and running, follow these simple steps.
   </details>
 
   ---
-  
-  <details>
+ <details>
     <summary><code>GET /api/tasks</code> - Get all tasks</summary>
     <table>
       <tr>
@@ -205,7 +204,11 @@ To get a local copy up and running, follow these simple steps.
           <strong>Success Response:</strong> <code>200 OK</code>
         </td>
         <td valign="top">
-          <em>(No screenshot provided)</em>
+          <strong>Example in Postman:</strong><br>
+          <a href="https://github.com/user-attachments/assets/abf052db-a0de-41ad-adb5-f4bfa2845342">
+            <img src="https://github.com/user-attachments/assets/abf052db-a0de-41ad-adb5-f4bfa2845342" alt="Get Tasks API Screenshot" width="400"/>
+          </a>
+          <br><em>Click image to enlarge</em>
         </td>
       </tr>
     </table>
@@ -227,7 +230,11 @@ To get a local copy up and running, follow these simple steps.
           <strong>Success Response:</strong> <code>200 OK</code>
         </td>
         <td valign="top">
-          <em>(No screenshot provided)</em>
+          <strong>Example in Postman:</strong><br>
+          <a href="https://github.com/user-attachments/assets/4f4328e3-bc83-4fa4-8f56-f10af7fae7fe">
+            <img src="https://github.com/user-attachments/assets/4f4328e3-bc83-4fa4-8f56-f10af7fae7fe" alt="Update Task API Screenshot" width="400"/>
+          </a>
+          <br><em>Click image to enlarge</em>
         </td>
       </tr>
     </table>
@@ -244,7 +251,11 @@ To get a local copy up and running, follow these simple steps.
           <strong>Success Response:</strong> <code>200 OK</code>
         </td>
         <td valign="top">
-          <em>(No screenshot provided)</em>
+          <strong>Example in Postman:</strong><br>
+          <a href="https://github.com/user-attachments/assets/f2eacd11-4f41-4488-bef9-5a849cf500a8">
+            <img src="https://github.com/user-attachments/assets/f2eacd11-4f41-4488-bef9-5a849cf500a8" alt="Delete Task API Screenshot" width="400"/>
+          </a>
+          <br><em>Click image to enlarge</em>
         </td>
       </tr>
     </table>
@@ -261,7 +272,11 @@ To get a local copy up and running, follow these simple steps.
           <strong>Success Response:</strong> <code>200 OK</code>
         </td>
         <td valign="top">
-          <em>(No screenshot provided)</em>
+          <strong>Example in Postman:</strong><br>
+          <a href="https://github.com/user-attachments/assets/48bb4d70-cf19-4063-ab02-83b812edc288">
+            <img src="https://github.com/user-attachments/assets/48bb4d70-cf19-4063-ab02-83b812edc288" alt="Leaderboard API Screenshot" width="400"/>
+          </a>
+          <br><em>Click image to enlarge</em>
         </td>
       </tr>
     </table>
